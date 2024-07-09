@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식 추천 룰렛</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <div class="container">
+        <h1>오늘의 저녁 메뉴는?</h1>
+        <p>사용자의 나이와 취향을 입력해주세요.</p>
+        <form id="userForm">
+            <label for="age">나이:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="preference">취향:</label>
+            <select id="preference" name="preference" required>
+                <option value="">선택하세요</option>
+                <option value="밥">밥</option>
+                <option value="고기">고기</option>
+                <option value="면">면</option>
+                <option value="국">국</option>
+            </select>
+            
+            <button type="button" onclick="spinRoulette()">룰렛 돌리기</button>
+        </form>
+        
+        <div id="result" class="result">
+            <h2>추천 음식:</h2>
+            <p id="foodResult"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
